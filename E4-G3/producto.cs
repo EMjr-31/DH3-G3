@@ -13,11 +13,13 @@ namespace E4_G3
         string marca;
         float precio;
         int stock;
+        string img;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Marca { get => marca; set => marca = value; }
         public float Precio { get => precio; set => precio = value; }
         public int Stock { get => stock; set => stock = value; }
+        public string Img { get => img; set => img = value; }
     }
 }

@@ -31,6 +31,7 @@ namespace E4_G3
             txtPrecio.Clear();
             txtStock.Clear();
             txtNombre.Focus();
+            pictureBox1.Image = null;                               
         } 
         
         public Form1()
@@ -75,6 +76,7 @@ namespace E4_G3
             txtMarca.Text = product.Marca;
             txtPrecio.Text = Convert.ToString(product.Precio);
             txtStock.Text = Convert.ToString(product.Stock);
+            pictureBox1.Image = Image.FromFile(product.Img);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -99,6 +101,8 @@ namespace E4_G3
             product.Marca = txtMarca.Text;
             product.Precio = float.Parse(txtPrecio.Text);
             product.Stock = int.Parse(txtStock.Text);
+            
+            product.Img = Direccion;
             if (edit_indice > -1)
             {
                 Productos[edit_indice] = product;
@@ -111,5 +115,30 @@ namespace E4_G3
             UpdateGrid();
             reset();
         }
+        ///Variable de venta de dialogo
+        public OpenFileDialog buscar = new OpenFileDialog();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BuscarImagen();
+        }
+        //metodo ded buscar img
+        public void BuscarImagen()
+        {
+            buscar.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
+            DialogResult r = buscar.ShowDialog();
+            if (r == DialogResult.Abort)
+            {
+                return;
+            }
+            if (r == DialogResult.Cancel)
+            {
+                return;
+            }
+            Direccion = buscar.FileName;
+            pictureBox1.Image = Image.FromFile(buscar.FileName);
+        }
+        ///Clase almacendaro de direcion
+        private string direccion;
+        public string Direccion { get => direccion; set => direccion = value; }
     }
 }
