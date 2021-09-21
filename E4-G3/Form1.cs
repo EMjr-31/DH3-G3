@@ -140,5 +140,11 @@ namespace E4_G3
         ///Clase almacendaro de direcion
         private string direccion;
         public string Direccion { get => direccion; set => direccion = value; }
+
+        private void brnCancelar_Click(object sender, EventArgs e)
+        {
+            reset();
+            edit_indice = -1;
+        }
     }
 }

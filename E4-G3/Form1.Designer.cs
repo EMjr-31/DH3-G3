@@ -45,6 +45,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.brnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.brnCancelar);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(524, 12);
@@ -159,7 +161,7 @@
             // 
             this.btnGuardar.Location = new System.Drawing.Point(545, 377);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(243, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(114, 23);
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -190,6 +192,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(21, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -202,6 +205,16 @@
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // brnCancelar
+            // 
+            this.brnCancelar.Location = new System.Drawing.Point(150, 362);
+            this.brnCancelar.Name = "brnCancelar";
+            this.brnCancelar.Size = new System.Drawing.Size(114, 23);
+            this.brnCancelar.TabIndex = 11;
+            this.brnCancelar.Text = "Cancelar";
+            this.brnCancelar.UseVisualStyleBackColor = true;
+            this.brnCancelar.Click += new System.EventHandler(this.brnCancelar_Click);
             // 
             // Form1
             // 
@@ -252,6 +265,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button brnCancelar;
     }
 }
 
